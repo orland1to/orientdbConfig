@@ -4,7 +4,7 @@
   "writeQuorum": "majority",
   "executionMode": "undefined",
   "readYourWrites": true,
-  "newNodeStrategy": "static",
+  "newNodeStrategy": "dynamic",
   "servers": {
     "*": "master"
   },
