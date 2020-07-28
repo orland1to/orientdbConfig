@@ -33,15 +33,10 @@
 	<network>
 		<port auto-increment="true">2434</port>
 		<join>
-			<multicast enabled="false">
+			<multicast enabled="true">
 				<multicast-group>235.1.1.1</multicast-group>
 				<multicast-port>2434</multicast-port>
 			</multicast>
-			 <tcp-ip enabled="true">
-				<member>orientdb-d-0:2434</member>
-				<member>orientdb-d-1:2434</member>
-				<member>orientdb-d-2:2434</member>
-			</tcp-ip>
 		</join>
 	</network>
 	<executor-service>
