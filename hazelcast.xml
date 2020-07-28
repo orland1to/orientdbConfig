@@ -37,14 +37,13 @@
         <multicast-group>235.1.1.1</multicast-group>
         <multicast-port>2434</multicast-port>
       </multicast>
-      <kubernetes>
-        <enabled>true</enabled>
-      </kubernetes>
-	  <rest-api>
-      <enabled>true</enabled>
+       <kubernetes enabled="true">
+                <namespace>default</namespace>
+                <service-name>hazelcast</service-name>
+       </kubernetes>
+	  <rest-api enabled="true">
       <endpoint-groups>
-        <HEALTH_CHECK>
-          <enabled>true</enabled>
+        <HEALTH_CHECK enabled="true">
         </HEALTH_CHECK>
       </endpoint-groups>
     </rest-api>
