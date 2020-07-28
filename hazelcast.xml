@@ -37,11 +37,17 @@
         <multicast-group>235.1.1.1</multicast-group>
         <multicast-port>2434</multicast-port>
       </multicast>
-      <tcp-ip enabled="true">
-        <member>orientdbservice-0:2434</member>
-        <member>orientdbservice-1:2434</member>
-        <member>orientdbservice-2:2434</member>
-      </tcp-ip>
+      <kubernetes>
+        <enabled>true</enabled>
+      </kubernetes>
+	  <rest-api>
+      <enabled>true</enabled>
+      <endpoint-groups>
+        <HEALTH_CHECK>
+          <enabled>true</enabled>
+        </HEALTH_CHECK>
+      </endpoint-groups>
+    </rest-api>
      </join>
   </network>
 	<executor-service>
