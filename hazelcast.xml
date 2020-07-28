@@ -27,7 +27,7 @@
                                     class="com.hazelcast.kubernetes.HazelcastKubernetesDiscoveryStrategy">
 
                     <properties>
-                        <property name="service-dns">orientdbservice2.default.svc.cluster.local</property>
+                        <property name="service-dns">orientdbservice.default.svc.cluster.local</property>
                         <property name="service-dns-timeout">10</property>
                     </properties>
                 </discovery-strategy>
