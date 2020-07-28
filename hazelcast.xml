@@ -29,14 +29,25 @@
 		<property name="hazelcast.heartbeat.interval.seconds">5</property>
 		<property name="hazelcast.max.no.heartbeat.seconds">30</property>
 		<property name="hazelcast.merge.next.run.delay.seconds">15</property>
+		<property name="hazelcast.discovery.enabled">true</property>
 	</properties>
 	<network>
 		<port auto-increment="true">2434</port>
 		<join>
-			<multicast enabled="true">
+			<multicast enabled="false">
 				<multicast-group>235.1.1.1</multicast-group>
 				<multicast-port>2434</multicast-port>
 			</multicast>
+			<tcp-ip enabled="false"/>
+            <discovery-strategies>
+                <discovery-strategy enabled="true"
+                                    class="com.hazelcast.kubernetes.HazelcastKubernetesDiscoveryStrategy">
+                    <properties>
+                        <property name="service-dns">orientdbservice.default.svc.cluster.local</property>
+                        <property name="service-dns-timeout">10</property>
+                    </properties>
+                </discovery-strategy>
+            </discovery-strategies>
 		</join>
 	</network>
 	<executor-service>
