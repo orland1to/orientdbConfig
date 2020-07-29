@@ -6,7 +6,7 @@
                 <parameter value="${distributed}" name="enabled"/>
                 <parameter value="${ORIENTDB_HOME}/config/default-distributed-db-config.json" name="configuration.db.default"/>
                 <parameter value="${ORIENTDB_HOME}/config/hazelcast.xml" name="configuration.hazelcast"/>
-                <parameter value="node1595457211737" name="nodeName"/>
+                <!---parameter value="node1595457211737" name="nodeName"/ -->
             </parameters>
         </handler>
         <handler class="com.orientechnologies.orient.server.handler.OJMXPlugin">
