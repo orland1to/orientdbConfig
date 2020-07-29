@@ -2,7 +2,7 @@
   "autoDeploy": true,
   "readQuorum": 1,
   "writeQuorum": "majority",
-  "executionMode": "undefined",
+  "executionMode": "asynchronous",
   "readYourWrites": true,
   "newNodeStrategy": "dynamic",
   "servers": {
