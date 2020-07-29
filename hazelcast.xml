@@ -30,6 +30,7 @@
                         <!-- configure discovery service API lookup -->
                         <property name="service-name">orientdbservice</property>
                         <property name="namespace">default</property>
+                        <property name="kubernetes-master">https://172.42.42.100:6443</property>
                     </properties>
                 </discovery-strategy>
             </discovery-strategies>
