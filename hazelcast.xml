@@ -22,12 +22,15 @@
         <join>
             <multicast enabled="false"/>
             <tcp-ip enabled="false"/>
-            <discovery-strategies>
+              <discovery-strategies>
                 <discovery-strategy enabled="true"
                                     class="com.hazelcast.kubernetes.HazelcastKubernetesDiscoveryStrategy">
+
                     <properties>
-                        <property name="service-dns">orientdbservice.default.svc.cluster.local</property>
-                        <property name="service-dns-timeout">10</property>
+                        <!-- configure discovery service API lookup -->
+                        <property name="service-name">orientdbservice</property>
+                        <property name="namespace">default</property>
+                        <property name="kubernetes-master">kmaster</property>
                     </properties>
                 </discovery-strategy>
             </discovery-strategies>
